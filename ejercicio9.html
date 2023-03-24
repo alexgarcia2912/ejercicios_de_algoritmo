@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 9</title>
+</head>
+<body>
+    <script>
+        let num=10;
+        let i=1;
+        let numpri=1;
+        var suma=0;
+        var prom=0;
+        function primo(n){
+            for (let contador = 2; contador < n; contador++) {
+                if (n % contador == 0) {
+                    return false
+                }
+            }return true
+        }
+        while(i<=num){
+            numpri++
+            if(primo(numpri)==true){
+                document.write('numero primo:',numpri,'<br>')
+                i++
+                if(numpri>1 && numpri<10){
+                    document.write('[1-10] : ',numpri)
+
+                }
+                if (numpri>15 && numpri<25) {
+                    document.write('[15-25] :',numpri,)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

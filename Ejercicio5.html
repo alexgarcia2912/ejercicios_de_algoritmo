@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=0
+        var contador_par=0
+        var contador_impar=0
+        var par=0
+        var impar=0
+        var suma_pares=0
+        var producto_impares=1
+        num=Number(prompt("Ingrese número"))
+        while(contador_par<=num){
+            if(par%2==0){
+                suma_pares=suma_pares+par
+                par++
+                contador_par++
+            }
+            else{
+                par++
+            }
+        }
+        while(contador_impar<num){
+            if(impar%2==1){
+                producto_impares=producto_impares*impar
+                impar++
+                contador_impar++
+            }
+            else{
+                impar++
+            }
+        }
+        document.write("Suma de los pares: ",suma_pares,"<br>")
+        document.write("Producto de los impares: ",producto_impares,"<br>")
+
+    </script>
+</body>
+</html>

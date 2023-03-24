@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPrimo(numero) {
+            // Verifica si un número es primo
+            for (let i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return numero !== 1;
+        }
+        function numerosPrimosFibonacci() {
+            let fib = [0,1]; // Inicializa la secuencia de Fibonacci
+            let primos = [];
+            let sumaPrimos = 0;
+            for (let i = 2; i <= 10; i++) {
+                fib[i] = fib[i-1] + fib[i-2]; // Calcula el siguiente número de Fibonacci
+                if (esPrimo(fib[i])) {
+                    primos.push(fib[i]); // Agrega el número primo a la matriz
+                    sumaPrimos += fib[i]; // Suma el número primo a la suma de primos
+                }
+            }
+            let promedioPrimos = sumaPrimos / primos.length;
+            document.write(`Los números primos en los primeros 10 números de Fibonacci son: ${primos}...`,"<br>");
+            document.write(`La suma de los números primos es: ${sumaPrimos}`,"<br>");
+            document.write(`El promedio de los números primos es: ${promedioPrimos}`,"<br>");
+        }numerosPrimosFibonacci();
+    </script>
+</body>
+</html>

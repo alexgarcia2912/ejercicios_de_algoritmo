@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let entrada=Number(prompt('ingrese numero de entradas'))
+        let precioTotal=0
+        let descuento=0
+        //
+        if (entrada < 1 || entrada > 4) {
+            alert("Cantidad de entradas inválida");
+        } else {
+            let costo_Entrada=Number(prompt('ingrese costo por entrada'))
+            precioTotal=entrada*costo_Entrada
+            // Calculamos el descuento correspondiente según la cantidad de entradas
+            let totalDescuento=0
+            descuento = 0;
+            if (entrada == 2) {
+                descuento = precioTotal * 0.15;
+            } else if (entrada == 3) {
+                descuento = precioTotal * 0.2;
+            } else if (entrada == 4) {
+                descuento = precioTotal * 0.3;
+            }
+        }
+        totalDescuento = precioTotal - descuento;
+        document.write( 'el precio total a pagar es: $',totalDescuento)
+    </script>
+</body>
+</html>

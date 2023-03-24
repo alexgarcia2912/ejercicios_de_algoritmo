@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Definir el número de obreros y el costo por hora
+    const numObreros = 80;
+    const costoPorHora = 10;
+    // Crear una función para calcular el salario de cada obrero
+    function calcularSalario(horasTrabajadas) {
+      return horasTrabajadas * costoPorHora;
+    }
+    // Calcular el salario de cada obrero y sumarlos para obtener el total
+    let totalSalarios = 0;
+    for (let i = 1; i <= numObreros; i++) {
+      const horasTrabajadas = parseInt(prompt(`Ingrese las horas trabajadas por el obrero ${i}:`));
+      const salario = calcularSalario(horasTrabajadas);
+      totalSalarios=totalSalarios+salario;
+    }
+    // Imprimir el total de la nómina
+    document.write(`El total de la nómina es de $${totalSalarios}.`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n
+        let contador_50a75=0
+        let contador_mayor_80=0
+        let contador_menor_30=0
+        while (n!=0){
+            n=Number(prompt('ingrese una lista de numeros'));
+            if (n >= 50 && n <= 75) {
+                contador_50a75++;
+            }
+            if (n > 80) {
+                contador_mayor_80++;
+            }
+            if (n < 30) {
+                contador_menor_30++;}
+        }
+        document.write('Cantidad de números entre 50 y 75:',contador_50a75,'<br>')
+        document.write('Cantidad de números mayores de 80:',contador_mayor_80,'<br>')
+        document.write('Cantidad de números menores de 30:',contador_menor_30)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let base = 0 
+        let exponente = 0
+        let contador = 0
+        let resultado = 1
+        base = Number(prompt('Ingrese el valor de la Base: '))
+        exponente = Number(prompt('Ingrese el valor del Exponente: '))
+        document.write('Procesando ', base, '^', exponente)
+        document.write('<br>')
+        if (exponente in [0, 1]) {
+            resultado = exponente === 0 ? 1 : base
+        } 
+        else {
+            while (contador < exponente) {
+                resultado = resultado * base
+                contador++
+            }
+        }
+        document.write('Resultado: ', resultado)
+    </script>
+</body>
+</html>

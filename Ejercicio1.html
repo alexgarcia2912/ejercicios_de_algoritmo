@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Función para verificar si un número es primo 
+        function esPrimo(num) {
+            // Verificar si es 1 o menor
+            if (num <= 1) return false;
+            // Verificar si es divisible por algún número menor que él mismo
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            // Si no encontró ningún número por el cual fuera divisible, es primo
+            return true;
+        }
+        // Función para calcular los primeros n números Fibonacci
+        function calcularFibonacci(n) {
+            let fib = [1, 1];
+            for (let i = 2; i < n; i++) {
+                fib.push(fib[i-1] + fib[i-2]);
+            }
+            return fib;
+        }
+        // Calcular los primeros 10 números Fibonacci
+        const fibonacci = calcularFibonacci(10);
+        document.write("Los primeros 10 números Fibonacci son: ", fibonacci,"<br>");
+        // Contar cuántos de los números Fibonacci son primos
+        let countPrimos = 0;
+        for (let i = 0; i < fibonacci.length; i++) {
+            if (esPrimo(fibonacci[i])) {
+                countPrimos++;
+            }
+        }
+        document.write("Hay ", countPrimos, " números primos en los primeros 10 números Fibonacci.");
+    </script>
+</body>
+</html>

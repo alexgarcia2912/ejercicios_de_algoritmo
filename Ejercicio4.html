@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Mh = 23 
+        const Mm = 59 
+        const Ms = 59
+        let hora=0
+        let minuto=0
+        let segundo=0
+        hora = Number(prompt('Ingrese Hora entre 0 a 23: '))
+        minuto = Number(prompt('Ingrese Minuto entre 0 a 59: '))
+        segundo = Number(prompt('Ingrese segundo entre 0 a 59: '))
+        document.write("Entrada :",hora,":",minuto,":",segundo)
+        segundo++
+        if (segundo > Ms) {
+            segundo = 0
+            minuto++
+        }
+
+        if (minuto > Mm) {
+            minuto = 0
+            hora++
+        }
+
+        if (hora > Mh) {
+            hora = 0
+        }
+        document.write("<br>")
+        document.write("salida :",hora,":",minuto,minuto,":",segundo,segundo)
+    </script>
+</body>
+</html>

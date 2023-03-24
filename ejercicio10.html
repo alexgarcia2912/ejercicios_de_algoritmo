@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 10</title>
+</head>
+<body>
+    <script>
+        const nombre=prompt('ingrese nombre del vendedor');
+        let sueldo=Number(prompt('ingrese sueldo basico'));
+        let venta1=Number(prompt('Ingrese venta 1 realizas en el mes',));
+        let venta2=Number(prompt('Ingrese venta 2 realizas en el mes',));
+        let venta3=Number(prompt('Ingrese venta 3 realizas en el mes',));
+        let comision=0;
+        let sueldo_total=0;
+        comision=(venta1*0.10)+(venta2*0.10)+(venta3*0.10)
+        document.write("Total de comisiones por ventas de "," ",nombre, ":"," ",comision,"<br>")
+        sueldo_total=sueldo+comision
+        document.write("Sueldo total de"," ",nombre , ":"," " ,sueldo_total)
+    </script>
+</body>
+</html>
